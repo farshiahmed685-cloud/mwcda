@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Login - MWCDA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- NAVBAR -->
+<div class="navbar">
+<div class="logo">MWCDA</div>
+<!-- HAMBURGER MENU -->
+<div class="menu-toggle" id="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="courses.html">Courses</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="admission.html">Enquiry</a></li>
+<li><a href="login.html">Login</a></li>
+</ul>
+</div>
+<div class="login-page">
+
+<div class="login-box">
+
+<h2 id="loginTitle">Login as Student</h2>
+
+<div class="role-selector">
+<button type="button" class="role active" onclick="changeRole('student', this)">Student</button>
+<button type="button" class="role" onclick="changeRole('admin', this)">Admin</button>
+<button type="button" class="role" onclick="changeRole('staff', this)">Staff</button>
+</div>
+
+<form onsubmit="return false;">
+
+<div class="input-group">
+<label for="userId" id="idLabel">Student ID</label>
+<input type="text" id="userId" placeholder="Enter ID" autocomplete="username">
+</div>
+
+<div class="input-group">
+<label for="password">Password</label>
+<input type="password" id="password" placeholder="Enter Password" autocomplete="current-password">
+</div>
+
+<button type="submit" class="login-btn">Login</button>
+
+</form>
+<div class="login-extra">
+<a href="#">Forgot Password?</a>
+</div>
+
+</div>
+</div>
+<script>
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.addEventListener("click", () => {
+nav.classList.toggle("active");
+});
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>
